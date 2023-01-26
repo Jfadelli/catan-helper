@@ -1,0 +1,58 @@
+.time-remaining {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+
+select {
+    height: 80px;
+    width: 250px;
+    font-size: 30px;
+    font-variant: small-caps;
+    font-weight: 800;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.timer-visualization {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: 'red';
+    height: 50px;
+    width: 1010px;
+    margin: 0 0 30px 0;
+}
+
+.timer-bar {
+    display: flex;
+    border-radius: 40px;
+    background-color: ivory;
+    height: 40px;
+    width: 500px;
+    border: 2px solid black
+}
+
+.tv-0 {
+    height: 40px;
+    width: 50px;
+    border-top-left-radius: 40px !important;
+    border-bottom-left-radius: 40px !important;
+}
+
+.tv-9 {
+    height: 40px;
+    width: 50px;
+    border-top-right-radius: 40px !important;
+    border-bottom-right-radius: 40px !important;
+}
+
+.timer-bar div {
+    height: 40px;
+    width: 50px;
+    border-right: 1px solid black
+}
+
+button{
+    /* color:blue */
+}

@@ -1,6 +1,5 @@
-import logo from './static/sheep.png';
+// import logo from './static/sheep.png';
 import './App.css';
-
 import TurnTimer from './components/TurnTimer';
 import ScoreBoard from './components/ScoreBoard';
 

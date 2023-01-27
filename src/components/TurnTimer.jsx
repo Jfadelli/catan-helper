@@ -4,13 +4,14 @@ import magicalSound from '../static/sfx/Magical Twinkle 1.mp3'
 
 import './styles/turntimer.css'
 
-export default function TurnTimer() {
-    const [seconds, setSeconds] = useState(45)
+export default function TurnTimer(props) {
+    const [seconds, setSeconds] = useState(3)
     const [visualization, setVisualization] = useState(10)
     const [playPause, setPlayPause] = useState("pause")
     const [resetCache, setResetCache] = useState(seconds)
+    const [mute, toggleMute] = useState(false)
 
-    const timerOptions = [30, 45, 60, 90]
+    const timerOptions = [3, 30, 45, 60, 90]
 
     const timerBarColor = "orange"
 
@@ -39,11 +40,19 @@ export default function TurnTimer() {
         setSeconds(resetCache)
     }
 
+    function handleMute() {
+        if (mute === false){
+            toggleMute(true)
+        } else {
+            toggleMute(false)
+        }
+        console.log(mute) 
+    }
     useEffect(() => {
         if (playPause === "play") {
             const timer = seconds > 0 && setInterval(() => setSeconds(seconds - 1), 1000);
             
-            if(seconds === 0){
+            if(seconds === 0 && mute === false){
                 playMagical()
             }
             return () => {
@@ -52,7 +61,7 @@ export default function TurnTimer() {
             }
         }
         return;
-    }, [seconds, playPause, playMagical]);
+    }, [seconds, playPause, playMagical, mute]);
 
     useEffect(() => {
         if (playPause === "play") {
@@ -118,6 +127,7 @@ export default function TurnTimer() {
 
 
                 </select>
+                <input type="checkbox" onClick={handleMute}/><label style={{fontVariant:"small-caps"}}>mute timer</label>
 
 
             </div>

@@ -3,7 +3,7 @@ import useSound from 'use-sound'
 import cheerSound from '../static/sfx/Kids Cheer Light .mp3'
 import booSound from '../static/sfx/Crowd Disappointment.mp3'
 // import magicalSound from '../static/sfx/Magical Twinkle 1.mp3'
-import './styles/scoreboard.css'
+
 
 const ScoreBoard = () => {
     const [jasonScore, setJasonScore] = useState(0)

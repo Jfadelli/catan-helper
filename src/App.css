@@ -11,13 +11,14 @@
 
 button {
   color: black;
-  height: 80px;
-  width: 120px;
+  height: 70px;
+  min-width: 70px;
   font-size: 30px;
   font-variant: small-caps;
   font-weight: 800;
   border-radius: 10px;
   margin: 0px 5px;
+  border-radius: 360px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
